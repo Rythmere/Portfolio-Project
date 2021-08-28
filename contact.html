@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, iniital-scale=1">
+	<title> Contact Brice Douvier-Gore </title>
+	<link rel="Icon" href="./img/BDG-Rythmere-Photoshop.png">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.production.css">
+</head>
+
+<body>
+	<!-- Add Logo Here -->
+	<header class="page-header">
+		<img src="img/logo.png" alt="" class="page-header_item">
+		<nav class="main-navigation page-header_item">
+			<ul role="menubar" class="navigation-list">
+				<li role="presentation">
+					<a href="index.html" role="menuitem">Home</a>
+				</li>
+				<li role="presentation">
+					<a href="about.html" role="menuitem">About me</a>
+				</li>
+				<li role="presentation">
+					<a href="work.html" role="menuitem">My work</a>
+				</li>
+				<li role="presentation">
+					<a href="contact.html" role="menuitem">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div>
+		<form action="*" method="post" id="contact-form">
+			<label class="standard-label" for="contact-email">E-mail *: </label>
+			<input type="email" id="contact-email" required="required">
+
+			<label class="standard-label" for="contact-tel">Telephone: </label>
+			<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel" >
+
+			<label class="standard-label" for="message">Message * (Max of 240 Characters):  </label>
+			<textarea maxlength="240" required="required" id="message"></textarea>
+
+			<input type="submit" value="Send message">
+
+		</form>
+	</div>
+	<div>
+		<h1><a href="mailto:Rythmere@gmail.com">Contact me</a></h1>
+		Brice Douvier-Gore<br>
+		<a href="tel:+3204922052" >1-(320)-492-2052</a><br>
+		<a href="mailto:Rythmere@gmail.com">Rythmere@gmail.com</a>
+
+	</div>
+	<footer class="page-footer">
+		<p>Find me on</p>
+		<div class="social-media">
+			<img src="img/github.svg" alt="Github">
+			<img src="img/twitter.svg" alt="Twitter">
+			<img src="img/linkedin.svg" alt="LinkedIn">
+		</div>
+	</footer>
+	<script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
