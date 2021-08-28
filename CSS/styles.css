@@ -1,8 +1,8 @@
 :root {
-	 --background: lightgrey;
-	 --link-colour: #357b70;
-	 --link-visited: black;
-	 --link-active: #489c79;
+	 --background: #616161;
+	 --link-colour: white;
+	 --link-visited: lightslategrey;
+	 --link-active: blue;
 	 --button-background: #357b70;
 	 --button-colour: white;
 	 --button-background-secondary: #e0b354;
@@ -11,14 +11,21 @@
 	 --colour-change-primary: #edc655;
 	 --colour-change-secondary: #f76414;
 	 --header-font-weight: 700;
+	 --header-background: black;
 }
 
+.container {
+	flex-grow: 1;
+}
 body {
 	background-color: var(--background);
 	font-family: 'Amatic SC', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.6;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 h1 {
@@ -87,7 +94,7 @@ button:focus,
 .profile_portrait {
 	float: left;
 	width: 250px;
-	margin-right: 40px;
+	margin: 0 10px;
 	border-radius: 50%;
 }
 
@@ -99,8 +106,10 @@ button:focus,
 }
 
 .profile {
-	max-width: 700px;
-	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
 }
 
 .table-center {
@@ -114,10 +123,14 @@ button:focus,
 .page-header {
 	display: flex;
 	width: 100%;
-	padding: 20px;
+	height: 10%;
+	padding: 10px;
+	background-color: var(--header-background);
 }
 
 .page-header_item {
+	display: flex;
+	flex-direction: column;
 	flex: 0 1 200px;
 }
 
@@ -127,12 +140,19 @@ button:focus,
 }
 
 .navigation-list {
+	display: flex;
+	flex-grow: 1;
 	list-style-type: none;
+	height: 100%;
+	margin: 0;
+	align-self: flex-end;
 }
 
 .navigation-list li {
+	flex-grow: 1;
 	display: inline-block;
 	margin-left: 15px;
+	align-self: flex-end;
 }
 
 .grid {
