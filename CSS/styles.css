@@ -43,10 +43,6 @@ h3 {
   font-weight: var(--header-font-weight);
 }
 
-.center-button {
-	text-align: center;
-}
-
 a {
 	color: var(--link-colour);
 }
@@ -112,8 +108,33 @@ button:focus,
 	min-height: 100%;
 }
 
-.table-center {
-	margin: 0 auto;
+.profile-about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+
+.work-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.profile-work {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100%;
+}
+
+.profile-contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
 }
 
 * {
