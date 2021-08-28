@@ -212,6 +212,7 @@ button:focus,
 	}
 }
 
+/*
 @keyframes color-change {
 	from {
 		fill: var(--colour-change-primary);
@@ -253,3 +254,4 @@ button:focus,
 .cloud-back {
 	animation: 34s cloud-move-reverse infinite alternate linear;
 }
+*/

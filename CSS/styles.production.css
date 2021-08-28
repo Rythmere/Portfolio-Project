@@ -5,12 +5,25 @@
 * Browsers: last 4 version
 */
 
+.container {
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+}
 body {
-	background-color: lightgrey;
+	background-color: #616161;
 	font-family: 'Amatic SC', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.6;
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 h1 {
@@ -28,23 +41,21 @@ h3 {
   font-weight: 700;
 }
 
-.center-button {
-	text-align: center;}
-
 a {
-	color: #357b70;
+	color: white;
 }
 
 a:visited {
-	color: black;
+	color: lightslategrey;
 }
 
-a:hover, a:focus {
-	text-decoration: none;
+a:hover,
+	a:focus {
+		text-decoration: none;
 }
 
 a:active {
-	color: #489c79;
+	color: blue;
 }
 
 button {
@@ -84,6 +95,7 @@ button:focus,
 	cursor: pointer;
 	opacity: 0.8;
 }
+
 .button_secondary {
 	background-color: #e0b354;
 	color: #2b2b2b;
@@ -92,7 +104,7 @@ button:focus,
 .profile_portrait {
 	float: left;
 	width: 250px;
-	margin-right: 40px;
+	margin: 0 10px;
 	border-radius: 50%;
 }
 
@@ -109,12 +121,85 @@ button:focus,
 }
 
 .profile {
-	max-width: 700px;
-	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	min-height: 100%;
 }
 
-.table-center {
-	margin: 0 auto;
+.profile-about {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	min-height: 100%;
+}
+
+.work-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.profile-work {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	min-height: 100%;
+}
+
+.profile-contact {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 200px;
+	        flex: 0 1 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	min-height: 100%;
+	width: 100%;
 }
 
 * {
@@ -127,10 +212,19 @@ button:focus,
 	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	padding: 20px;
+	height: 10%;
+	padding: 10px;
+	background-color: black;
 }
 
 .page-header_item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 1 200px;
 	        flex: 0 1 200px;
@@ -144,12 +238,27 @@ button:focus,
 }
 
 .navigation-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	list-style-type: none;
+	height: 100%;
+	margin: 0;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 
 .navigation-list li {
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	display: inline-block;
 	margin-left: 15px;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 
 .grid {
@@ -183,84 +292,52 @@ button:focus,
 	.grid {
 		grid-gap: 10px;
 	}
+
 	h1 {
 		font-size: 22px;
 	}
 }
 
-@-webkit-keyframes color-change {
-	from {
-		fill:  #edc655;
-	}
-	to {
-		fill: #f76414;
-	}
-}
-
+/*
 @keyframes color-change {
 	from {
-		fill:  #edc655;
+		fill: var(--colour-change-primary);
 	}
+
 	to {
-		fill: #f76414;
+		fill: var(--colour-change-secondary);
 	}
 }
 
 .sun {
-	-webkit-animation: 4s color-change infinite alternate linear;
-	        animation: 4s color-change infinite alternate linear;
-}
-
-@-webkit-keyframes cloud-move {
-	from {
-		-webkit-transform:  translate(0, 50px);
-		        transform:  translate(0, 50px);
-	}
-	to {
-		-webkit-transform: translate(200px, 50px);
-		        transform: translate(200px, 50px);
-	}
+	animation: 4s color-change infinite alternate linear;
 }
 
 @keyframes cloud-move {
 	from {
-		-webkit-transform:  translate(0, 50px);
-		        transform:  translate(0, 50px);
+		transform: translate(0, 50px);
 	}
+
 	to {
-		-webkit-transform: translate(200px, 50px);
-		        transform: translate(200px, 50px);
+		transform: translate(200px, 50px);
 	}
 }
 
 .cloud-front {
-	-webkit-animation: 30s cloud-move infinite alternate linear;
-	        animation: 30s cloud-move infinite alternate linear;
-}
-
-@-webkit-keyframes cloud-move-reverse {
-	from {
-		-webkit-transform: translate(446px, 48px);
-		        transform: translate(446px, 48px);
-	}
-	to {
-		-webkit-transform: translate(100px, 48px);
-		        transform: translate(100px, 48px);
-	}
+	animation: 30s cloud-move infinite alternate linear;
 }
 
 @keyframes cloud-move-reverse {
 	from {
-		-webkit-transform: translate(446px, 48px);
-		        transform: translate(446px, 48px);
+		transform: translate(446px, 48px);
 	}
+
 	to {
-		-webkit-transform: translate(100px, 48px);
-		        transform: translate(100px, 48px);
+		transform: translate(100px, 48px);
 	}
 }
 
 .cloud-back {
-	-webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-	        animation: 34s cloud-move-reverse infinite alternate linear;
+	animation: 34s cloud-move-reverse infinite alternate linear;
 }
+*/
