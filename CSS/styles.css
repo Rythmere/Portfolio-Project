@@ -103,6 +103,7 @@ button:focus,
 
 .profile {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	min-height: 100%;
@@ -130,11 +131,13 @@ button:focus,
 }
 
 .profile-contact {
+	flex: 0 1 200px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	min-height: 100%;
+	width: 100%;
 }
 
 * {
